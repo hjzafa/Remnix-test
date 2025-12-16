@@ -36,6 +36,15 @@
             color: var(--white);
             line-height: 1.2;
         }
+        
+        a {
+            text-decoration: none;
+            color: var(--text-grey);
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: var(--brand-orange);
+        }
 
         /* NAVIGATION */
         nav {
@@ -55,7 +64,7 @@
             display: block;
         }
 
-        .nav-links button {
+        .nav-links a {
             background-color: transparent;
             color: var(--white);
             border: 1px solid var(--brand-orange);
@@ -64,10 +73,12 @@
             cursor: pointer;
             font-weight: 600;
             transition: 0.3s;
+            display: inline-block;
         }
 
-        .nav-links button:hover {
+        .nav-links a:hover {
             background-color: var(--brand-orange);
+            color: var(--white);
             box-shadow: 0 0 15px rgba(242, 101, 34, 0.5);
         }
 
@@ -118,6 +129,7 @@
             letter-spacing: 1px;
             box-shadow: 0 10px 30px rgba(242, 101, 34, 0.4);
             transition: transform 0.3s ease;
+            display: inline-block;
         }
 
         .cta-button:hover {
@@ -136,10 +148,8 @@
         .hero-image img {
             width: 100%;
             max-width: 600px;
-            /* Since your render has a white background, we add a glow and rounded corners */
             border-radius: 20px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            /* A subtle animation to make it float */
             animation: float 6s ease-in-out infinite;
         }
 
@@ -212,7 +222,7 @@
         .step-number {
             font-size: 4rem;
             font-weight: 800;
-            color: #333; /* Dark grey number behind text */
+            color: #333; 
             margin-bottom: -30px;
             position: relative;
             z-index: 1;
@@ -223,6 +233,26 @@
             z-index: 2;
             color: var(--brand-orange);
             margin-bottom: 15px;
+        }
+        
+        /* CONTACT SECTION */
+        .contact-section {
+            background-color: var(--brand-dark-grey);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item h4 {
+            color: var(--brand-orange);
+            margin-bottom: 10px;
         }
 
         /* FOOTER */
@@ -244,6 +274,7 @@
             .hero-text { padding-right: 0; margin-bottom: 50px; }
             .hero-text h1 { font-size: 2.5rem; }
             .steps { flex-direction: column; gap: 40px; }
+            .contact-details { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
@@ -254,7 +285,8 @@
             <img src="logo.png" alt="REMNIX Logo">
         </div>
         <div class="nav-links">
-            <button>Pre-Order Now</button>
+            <a href="#contact" >Contact Us</a>
+            <a href="mailto:hjzafa7@gmail.com?subject=REMNIX%20Pre-Order%20Inquiry">Pre-Order Now</a>
         </div>
     </nav>
 
@@ -263,7 +295,7 @@
             <h4>REMINISCENCE THERAPY REIMAGINED</h4>
             <h1>Reassemble Your <br><span class="highlight">Memories.</span></h1>
             <p>The electronic puzzle board designed to connect seniors with their past. Upload family photos, jumble the pieces, and solve the memory together.</p>
-            <button class="cta-button">Reserve Your Remnix</button>
+            <a href="mailto:hjzafa7@gmail.com?subject=REMNIX%20Reservation%20Request" class="cta-button">Reserve Your Remnix</a>
         </div>
         <div class="hero-image">
             <img src="product.png" alt="Remnix Device">
@@ -313,6 +345,26 @@
             </div>
         </div>
     </section>
+    
+    <section class="contact-section" id="contact">
+        <h2>Get in Touch</h2>
+        <p>Have a question about the technology, therapy, or reservations? Contact us directly.</p>
+        
+        <div class="contact-details">
+            <div class="contact-item">
+                <h4>Call or WhatsApp</h4>
+                <a href="tel:+6588563807">+65 8856 3807</a>
+                <p style="font-size: 0.9rem;">(Singapore Support Line)</p>
+            </div>
+            <div class="contact-item">
+                <h4>Email Support</h4>
+                <a href="mailto:hjzafa7@gmail.com">hjzafa7@gmail.com</a>
+                <p style="font-size: 0.9rem;">(Expect a reply within 24 hours)</p>
+            </div>
+        </div>
+        
+    </section>
+
 
     <footer>
         <img src="logo.png" style="height: 30px; opacity: 0.5; margin-bottom: 20px;">
